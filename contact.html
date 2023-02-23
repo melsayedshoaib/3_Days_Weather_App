@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Days Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Start Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="imgs/icons8-weather-64.png" class="w-25" alt="weather"> Weather
+                App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar Section -->
+    <!-- Start Main Section -->
+    <main class="bg-dark pt-4">
+        <div class="container">
+            <div class="bar">
+                <a href="index.html">Home &#8594</a> <span>Contact</span>
+            </div>
+            <div class="row pt-3 text-white">
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.2740658098!2d-118.69192119136834!3d34.020161304907774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2seg!4v1677176788011!5m2!1sen!2seg" title="Locaion"></iframe>
+                    <div class="info">
+                        <p><i class="fa-solid fa-location-dot me-2"></i><span>Company Name INC.
+                            2803 Avenue Street, Los Angeles</span></p>
+                        <p><i class="fa-solid fa-phone me-2"></i><span>+1 800 314 235</span></p>
+                        <p><i class="fa-solid fa-envelope me-2"></i><span>contact@companyname.com</span></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Contact us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore ducimus, facilis, numquam id
+                    soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic, ipsum sed!</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your name...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Company name...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Website...">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End Main Section -->
+    <!-- Start Footer Section -->
+    <footer>
+        <div class="container-fluid bg-dark p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your email to subscribe..."
+                                aria-label="Enter your email to subscribe..." aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary subscribe" type="button"
+                                title="Enter your email to subscribe...">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="icons d-flex align-content-center justify-content-center pt-2">
+                            <a href="#fb" title="facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#tw" title="twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#gp" title="google-plus">
+                                <i class="fa-brands fa-google-plus"></i>
+                            </a>
+                            <a href="#pr" title="pinterest">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyrights pt-5">
+                    <p class="text-white text-center">All Rights Reserved &copy; 2023 Weather App</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
