@@ -78,6 +78,8 @@ findACity.addEventListener("keyup", (e) => {
   find(e.target.value);
 });
 
+// Test City
+
 find("Cairo");
 
 // Get current day
@@ -86,29 +88,33 @@ function getCurrent(theLocation, theCurrent) {
   if (theCurrent !== null) {
     let day = new Date(theCurrent.last_updated);
     document.querySelector(".today .top-info").innerHTML = `
-        <p class="current_week_day">${daysOfTheWeek[day.getDay()]}</p>
-        <p class="current_month_day">${
+        <p class="current_week_day fs-5">${daysOfTheWeek[day.getDay()]}</p>
+        <p class="current_month_day fs-5">${
           day.getDate() + " " + monthsOfTheYear[day.getMonth()]
         }</p>
       `;
     document.querySelector(".today .middle-info").innerHTML = `
-        <p>${theLocation.name}</p>
-        <p>${theCurrent.temp_c}<sup>O</sup>C</p>
-        <img src="${theCurrent.condition.icon}" alt="condition">
-        <div>${theCurrent.condition.text}</div>
+        <p class="fs-4 text-center">${theLocation.name}</p>
+        <div class="d-flex align-items-center justify-content-evenly">
+          <p class="fs-3 fw-bolder">${theCurrent.temp_c}<sup>O</sup>C</p>
+          <img src="${theCurrent.condition.icon}" alt="condition" class="w-25">
+        </div>
+        <div class="mb-2 text-center">${theCurrent.condition.text}</div>
     `;
     document.querySelector(".today .bottom-info").innerHTML = `
-        <p><i class="fa-solid fa-umbrella"></i> ${theCurrent.humidity} %</p>
-        <p><i class="fa-solid fa-wind"></i> ${theCurrent.wind_kph} km/h</p>
-        <p><i class="fa-solid fa-compass"></i> ${
-          theCurrent.wind_dir === "N"
-            ? "North"
-            : theCurrent.wind_dir === "S"
-            ? "South"
-            : theCurrent.wind_dir === "E"
-            ? "East"
-            : "West"
-        }</p>
+        <div class="stats d-flex align-items-center justify-content-evenly">
+          <p><i class="fa-solid fa-umbrella"></i> ${theCurrent.humidity} %</p>
+          <p><i class="fa-solid fa-wind"></i> ${theCurrent.wind_kph} km/h</p>
+          <p><i class="fa-solid fa-compass"></i> ${
+            theCurrent.wind_dir === "N"
+              ? "North"
+              : theCurrent.wind_dir === "S"
+              ? "South"
+              : theCurrent.wind_dir === "E"
+              ? "East"
+              : "West"
+          }</p>
+        </div>
     `;
   }
 }
@@ -118,12 +124,12 @@ function getCurrent(theLocation, theCurrent) {
 function getTomorrow(theForecase) {
   let day = new Date(theForecase[1].date);
   document.querySelector(".tomorrow .top-info").innerHTML = `
-    <p>${daysOfTheWeek[day.getDay()]}</p>
+    <p class="fs-5">${daysOfTheWeek[day.getDay()]}</p>
   `;
   document.querySelector(".tomorrow .middle-info").innerHTML = `
     <img src="${theForecase[1].day.condition.icon}" alt="condition">
-    <p>${theForecase[1].day.maxtemp_c}<sup>O</sup>C</p>
-    <p>${theForecase[1].day.mintemp_c}<sup>O</sup>C</p>
+    <p class="fs-3">${theForecase[1].day.maxtemp_c}<sup>O</sup>C</p>
+    <p class="fs-3">${theForecase[1].day.mintemp_c}<sup>O</sup>C</p>
     <p>${theForecase[1].day.condition.text}</p>
   `;
 }
@@ -133,10 +139,12 @@ function getTomorrow(theForecase) {
 function getDayAfterTomorrow(theForecase) {
   let day = new Date(theForecase[2].date);
   document.querySelector(".after-tomorrow .top-info").innerHTML = `
-    <p>${daysOfTheWeek[day.getDay()]}</p>
+    <p class="fs-5">${daysOfTheWeek[day.getDay()]}</p>
+  `;
+  document.querySelector(".after-tomorrow .middle-info").innerHTML = `
     <img src="${theForecase[2].day.condition.icon}" alt="condition">
-    <p>${theForecase[2].day.maxtemp_c}<sup>O</sup>C</p>
-    <p>${theForecase[2].day.mintemp_c}<sup>O</sup>C</p>
+    <p class="fs-3">${theForecase[2].day.maxtemp_c}<sup>O</sup>C</p>
+    <p class="fs-3">${theForecase[2].day.mintemp_c}<sup>O</sup>C</p>
     <p>${theForecase[2].day.condition.text}</p>
   `;
 }
