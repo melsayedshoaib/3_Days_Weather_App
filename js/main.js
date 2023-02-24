@@ -60,7 +60,7 @@ for (i = 0; i < links.length; i++) {
 
 async function find(city) {
   let response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=67deb1cf48e949ebb65115940232302&q=${city}&days=3`,
+    `https://api.weatherapi.com/v1/forecast.json?key=67deb1cf48e949ebb65115940232302&q=${city}&days=3`,
     { method: "GET" }
   );
   if (response.ok) {
