@@ -36,15 +36,29 @@
     <!-- End Navbar Section -->
     <!-- Start Main Section -->
     <main>
-        <div class="container-fluid">
-            <div class="container pt-5">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Find your location..." aria-label="Find your location..."
-                        aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" title="Find your location...">Find</button>
+        <section id="results">
+            <div class="container-fluid weather-info">
+                <div class="container pt-5">
+                    <div class="input-group mb-3">
+                        <input type="text" id="findacity" class="form-control" placeholder="Find your location..."
+                            aria-label="Find your location..." aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                            title="Find your location...">Find</button>
+                    </div>
+                </div>
+                <div class="container display-results">
+                    <div class="row">
+                        <div class="col-md-4 today bg-dark text-white">
+                            <div class="top-info d-flex justify-content-between"></div>
+                            <div class="middle-info"></div>
+                            <div class="bottom-info"></div>
+                        </div>
+                        <div class="col-md-4 tomorrow"></div>
+                        <div class="col-md-4 after-tomorrow"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- End Main Section -->
     <!-- Start Footer Section -->
