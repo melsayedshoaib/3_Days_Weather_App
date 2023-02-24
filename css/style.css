@@ -6,8 +6,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-img {
-    max-width: 100%;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Start Navbar Section */
@@ -40,14 +41,15 @@ img {
 
 /* Start Main Section */
 
-main .container-fluid {
-    height: 100vh;
+main {
     background-image: url(../imgs/adrien-cesard-HfGEtmnRwuE-unsplash.jpg);
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     -webkit-filter: grayscale(50%) blur(0.5px);
     filter: grayscale(50%) blur(0.5px);
+    flex: 1;
+    min-height: 0;
 }
 
 main .container-fluid input[type="text"] {
@@ -68,6 +70,28 @@ main .container-fluid input[type="text"]:focus {
     border: none;
     outline: none;
     box-shadow: none;
+}
+
+main .today {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+main .after-tomorrow {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    main .today {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    main .after-tomorrow {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 #button-addon2 {
@@ -112,6 +136,14 @@ iframe {
     width: 450px;
     height: 450px;
     border: 0;
+}
+
+main .contact-info {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
 
 @media (max-width: 480px) {
