@@ -98,7 +98,7 @@ function getCurrent(theLocation, theCurrent) {
         <div>${theCurrent.condition.text}</div>
     `;
     document.querySelector(".today .bottom-info").innerHTML = `
-        <p><i class="fa-solid fa-umbrella"></i> ${theCurrent.wind_degree} %</p>
+        <p><i class="fa-solid fa-umbrella"></i> ${theCurrent.humidity} %</p>
         <p><i class="fa-solid fa-wind"></i> ${theCurrent.wind_kph} km/h</p>
         <p><i class="fa-solid fa-compass"></i> ${
           theCurrent.wind_dir === "N"
