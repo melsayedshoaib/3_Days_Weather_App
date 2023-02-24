@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-dark">
     <!-- Start Navbar Section -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
         <div class="container">
@@ -35,29 +35,29 @@
     </nav>
     <!-- End Navbar Section -->
     <!-- Start Main Section -->
-    <main>
-        <section id="results">
-            <div class="container-fluid weather-info">
-                <div class="container pt-5">
-                    <div class="input-group mb-3">
+    <main class="vh-100 py-5">
+        <section>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="input-group p-3">
                         <input type="text" id="findacity" class="form-control" placeholder="Find your location..."
                             aria-label="Find your location..." aria-describedby="button-addon2">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"
                             title="Find your location...">Find</button>
                     </div>
                 </div>
-                <div class="container display-results">
-                    <div class="row bg-dark text-white">
-                        <div class="col-md-4 col-sm-12 today">
+                <div class="container">
+                    <div class="row text-white m-3">
+                        <div class="col-md-4 col-sm-12 today bg-black bg-gradient p-3">
                             <div class="top-info d-flex justify-content-between"></div>
                             <div class="middle-info"></div>
                             <div class="bottom-info"></div>
                         </div>
-                        <div class="col-md-4 col-sm-12 tomorrow text-center">
+                        <div class="col-md-4 col-sm-12 tomorrow text-center bg-dark bg-gradient p-3">
                             <div class="top-info"></div>
                             <div class="middle-info"></div>
                         </div>
-                        <div class="col-md-4 col-sm-12 after-tomorrow text-center">
+                        <div class="col-md-4 col-sm-12 after-tomorrow text-center bg-secondary bg-gradient p-3">
                             <div class="top-info"></div>
                             <div class="middle-info"></div>
                         </div>
@@ -76,7 +76,8 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Enter your email to subscribe..."
                                 aria-label="Enter your email to subscribe..." aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary subscribe" type="button" title="Enter your email to subscribe...">Subscribe</button>
+                            <button class="btn btn-outline-secondary subscribe" type="button"
+                                title="Enter your email to subscribe...">Subscribe</button>
                         </div>
                     </div>
                     <div class="col-md-4">
